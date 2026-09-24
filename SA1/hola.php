@@ -1,3 +1,3 @@
 <?php
 
-echo "<h1>:v</h1>";
+echo "<h1>Hola consu!</h1>";

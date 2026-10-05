@@ -1,9 +1,4 @@
-<!DOCTYPE html> 
-<html>
-<head>
-<title>Hola mundo</title> 
-</head>
-<body>
-    <?php echo "Hola mundo";  ?>
-</body>
-</html>
+<?php
+
+echo "<h1>Hola mundo</h1>";
+echo "<p>PHP está funcionando correctamente</p>";

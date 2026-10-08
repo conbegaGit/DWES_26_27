@@ -1,9 +1,11 @@
 <!DOCTYPE html> 
 <html>
-<head>
-<title>Hola mundo</title> 
-</head>
-<body>
-    <?php echo "Hola mundo soy Afia";  ?>
-</body>
+    <head>
+        <title>Hola mundo</title> 
+    </head>
+    <body>
+        <?php 
+            echo "Hola mundo soy Afia";  
+        ?>
+    </body>
 </html>

@@ -11,7 +11,7 @@
         define("LIMITE", 1000);
         $var1 = 100 + LIMITE;
         echo LIMITE."<br>";
-        echo "La suma del limite y var1 es: ". $var1; // no se puede poner entre las comillas
+        echo "La suma del limite + var1 es: ". $var1; // no se puede poner entre las comillas, porque no la pilla
         
     ?>
 </body>

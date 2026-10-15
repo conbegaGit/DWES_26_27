@@ -1,0 +1,15 @@
+<?php
+echo "<h2>FICHA DEL ALUMNO</h2>";
+$nombre = "Edwin Guillén";
+$edad =23;
+$curso ="2GS DAM"
+
+echo "<b>Nombre:</b> ".$nombre."<br>";
+echo "<b>Edad:</b> $edad<br>";
+echo "<b>Curso:</b> $curso<br>";
+
+echo 'Esta cadena ha sido escrita con comillas simples';
+
+
+
+?>

@@ -15,7 +15,7 @@
         $tipo1 = gettype($a); //imprime el tipo de dato de  a
         echo "<br>"; //salto de linea
         $a = "Hola"; //cambia a cadena
-        echo "Tipo de dato de variable inicial ".$tipo1."<br>Tipo de dato de variable final ".gettype($a) //se comprueba que ha cambiado
+        echo "Tipo de dato de variable inicial ".$tipo1."<br>Tipo de dato de variable final ".gettype($a) //El punto es como el + de java
         ?>
     </body>
 </html>

@@ -7,8 +7,11 @@
 </head>
 <body>
     <?php
-    
-    
+        $var = "Paco";
+        $a = "Hola $var <br>"; // en este ejemplo si que pilla la variable correctamente.
+        $b = 'Hola $var'; // no pilla la variable, pilla $var en vez del contenido de la variable
+        echo $a;
+        echo $b;
     ?>
 </body>
 </html>

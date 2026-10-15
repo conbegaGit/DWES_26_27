@@ -2,7 +2,7 @@
 echo "<h2>FICHA DEL ALUMNO</h2>";
 $nombre = "Edwin Guillén";
 $edad =23;
-$curso ="2GS DAM"
+$curso ="2GS DAM";
 
 echo "<b>Nombre:</b> ".$nombre."<br>";
 echo "<b>Edad:</b> $edad<br>";

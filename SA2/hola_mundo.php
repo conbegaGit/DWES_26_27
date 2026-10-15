@@ -6,7 +6,7 @@
     <!-- puede convivir código HTML y PHP en el mismo archivo -->
     <body>
         <?php // el php tiene que ir dentro de body
-                echo "Hola Mundo!";
-            ?>
+            echo "Hola Mundo!";
+        ?>
     </body>
 </html>

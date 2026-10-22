@@ -32,7 +32,7 @@
     echo "<h3>3. Sentencia continue</h3>";
     for($i = 0; $i < 5; $i = $i +1){
         if($i == 3){
-            continue; //continue = continue 1
+            continue; //continue significa que hará un salto a la siguiente iteración del bucle, es decir, que no ejecutará el código que hay después de la sentencia continue
         }
         echo "$i<br>";
     }

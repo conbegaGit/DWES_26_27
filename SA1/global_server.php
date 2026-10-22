@@ -12,6 +12,7 @@ echo "Método de petición: ".$_SERVER['REQUEST_METHOD']."<br>";
 
 echo "<h3>2. Contenido del array global \$_GLOBALS</h3>";
 
+//Crear una variable por separado no la añade al array global $GLOBALS, para ello hay que declararla como global
 global $mensaje;
 $mensaje = "Este es mi primer mensaje";
 

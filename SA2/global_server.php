@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>Hola Mundo</title>
+        <title>Global_server</title>
     </head>
     <body>
         <?php

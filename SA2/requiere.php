@@ -10,7 +10,7 @@
         // La palabra once significa que PHP comprueba si ese archivo se ha incluido
         // duarante la ejecución y, si es así, evita volver a ejecutarlo.
         $a = "variable \$a del principal";
-        require "requerido.php"; // da error, solo con la b, porque el archivo es asincrono necesitas declarar antes las variables que necesites utilizar
+        require "requerido.php"; // da error, solo con la b, porque el archivo es sincrono necesitas declarar antes las variables que necesites utilizar
         // require_once "requerido.php"
         $b = "otra variable \$b del principal";
         echo "En el script principal<br>";

@@ -9,7 +9,7 @@ for ($i = 0; $i < 3; $i++) {
     }
 }
 
-echo "2. Segundo for anidado <br>";
+echo "<br>2. Segundo for anidado <br>";
 for ($i = 0; $i < 3; $i++) {
     for ($j = 0; $j < 3; $j++) {
         echo "i: $i j: $j <br>";
@@ -23,7 +23,7 @@ for ($i = 0; $i < 3; $i++) {
 echo "<br>3. Sentencia continue<br>";
 for ($i = 0; $i < 5; $i++) {
     if ($i == 3) {
-        continue;
+        continue; // Continue fuerza una nueva iteración del bucle
     }
     echo "$i<br>";
 }

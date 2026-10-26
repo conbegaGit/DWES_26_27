@@ -12,4 +12,4 @@
     } else {
         echo "El valor de a es igual al valor de b pero el tipo de dato no es el mismo";
     }
-    
+?>

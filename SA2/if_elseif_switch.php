@@ -22,3 +22,4 @@ switch ($var4) {
     default:
         echo "El valor de la variable no es ni 100 ni 200";
 }
+?>

@@ -8,7 +8,7 @@
 <body>
     <?php
     //La palabra once significa que PHP comprobará si el archivo ya ha sido incluido
-    //duranter la ejecución y, si es así, evita volver a ejecutarlo
+    //duranter la ejecución y, si es así, evita volver a ejecutarlo. Esto es síncrono
     $a = "Variable \$a del principal";
     require "requerido.php"; //da warning en b porque se ha puesto el require antes de declarar la variable $b
     //require_once "requerido.php";

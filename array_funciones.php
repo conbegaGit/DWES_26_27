@@ -62,3 +62,8 @@
         echo"<td>".$alumno["nota"]."</td>";
         echo"</tr>";
     }
+
+    echo"</table>";
+
+    //htmlspecialchars() convierte caracteres especiales en entidades HTML para evitar problemas de seguridad y visualización
+    

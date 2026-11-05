@@ -65,5 +65,3 @@
 
     // htmlspecialchars() ayuda a evitar que el texto se interprete
     // como código html cuando se muestra en una página
-
-    

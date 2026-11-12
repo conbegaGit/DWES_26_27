@@ -30,11 +30,11 @@
 
             echo "<h3>Información de la excepción</h3>";
 
-            echo "<p>Mensaje: ". $e->getMessage(). "}</p>";
-            echo "<p>Código: ". $e->getCode(). "}</p>";
-            echo "<p>Archivo: ". $e->getFile(). "}</p>";
-            echo "<p>Linea: ". $e->getLine(). "}</p>";
-            echo "<p>Rastro: ". $e->getTrace(). "}</p>";
+            echo "<p>Mensaje: ". $e->getMessage(). "}</p><br>";
+            echo "<p>Código: ". $e->getCode(). "}</p><br>";
+            echo "<p>Archivo: ". print_r($e->getFile()). "}</p><br>";
+            echo "<p>Linea: ". $e->getLine(). "}</p><br>";
+            echo "<p>Rastro: ". $e->getTrace(). "}</p><br>";
         }finally{
             // Ejecuta si o si este apartado del programa
             echo "<h4>Fin del programa</h4>";

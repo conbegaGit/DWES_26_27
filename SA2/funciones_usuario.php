@@ -30,3 +30,4 @@
     echo"<p>El precio es $precio €</p>";
     echo"<p>El IVA es $iva €</p>";
     echo"<p>Total: $total €</p>";
+    

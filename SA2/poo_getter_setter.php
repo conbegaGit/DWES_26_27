@@ -50,6 +50,9 @@
         }
 
         $alumno1 = new Alumno("Jeremy Gabriel Pilozo Garcia", 100);
+        echo "<p>Alumno: ". $alumno1->getNombre() ."</p>";
+        echo "<p>Nota: ". $alumno1->getNota() ."</p>";
+
         $alumno1->setNota(7);
         $alumno1->mostrarDatos();
     ?>

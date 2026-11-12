@@ -1,0 +1,6 @@
+{
+  "phpserver.phpPath": "/opt/homebrew/bin/php",
+  "phpserver.port": 3000,
+  "phpserver.browser": "default",
+  "phpserver.ip": "localhost"
+}

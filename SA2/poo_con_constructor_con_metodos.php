@@ -30,9 +30,8 @@
             */
 
             public function mostrarDatos(){
-                echo "<p>Nombre: ". $this->nombre ."</p><br>";
+                echo "<p>Nombre: ". $this->nombre ."</p>";
                 echo "<p>Edad: ". $this->edad ."</p>";
-                echo "<br>";
             }
         }
 

@@ -1,25 +1,43 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php
+        /* Misma estructura que en java */
+        $var = 3;
+        echo "<h3> IF - ELSEIF - ELSE</h3>";
+        if ($var == 1){
+            echo "Es un uno";
+        }elseif ($var == 2){
+            echo "Es un dos";
+        }elseif ($var == 3){
+            echo "Es un tres";
+        }else{
+            echo "No es un uno, ni un dos, ni un tres";
+        }
+        /* Misma estructura que en java */
+        echo "<h3> SWITCH </h3>";
+        $var = 4;
 
-$var3 = 100;
-if ($var3 > 100) {
-    echo "El valor de la variable es mayor que 100";
-} elseif ($var3 < 100) {
-    echo "El valor de la variable es menor que 100";
-} else {
-    echo "El valor de la variable es igual a 100";
-}
+        switch ($var){
+            case 1:
+                echo "Es un uno";
+                break;
+            case 2:
+                echo "Es un dos";
+                break;
+            case 3:
+                echo "Es un tres";
+                break;
+            default:
+                echo "No es un uno, ni un dos ,ni un tres";
+                break;
+        }
 
-//Switch es equivalente, pero su lecutura es mas facil de entender, y es mas eficiente que if-elseif-else
-echo "<h3>SWITCH</h3>";
-$var4 = 20;
-switch ($var4) {
-    case 100:
-        echo "El valor de la variable es igual a 100";
-        break;
-    case 200:
-        echo "El valor de la variable es igual a 200";
-        break;
-    default:
-        echo "El valor de la variable no es ni 100 ni 200";
-}
-?>
+    ?>
+</body>
+</html>

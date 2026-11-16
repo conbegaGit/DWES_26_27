@@ -1,15 +1,25 @@
-<?php  
-    $a =3;
-    $b ="3";
-    if ($a == $b) {
-        echo "El valor de a es igual al valor de b y el tipo de dato es el mismo";
-    } else {
-        echo "El valor de a es igual al valor de b pero el tipo de dato no es el mismo";
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php
+        $a = 3;
+        $b = "3";
+        if ($a == $b){
+            echo "Son iguales <br>";
+        }else {
+            echo "No son iguales <br>";
+        }
 
-    if ($a === $b) {
-        echo "El valor de a es igual al valor de b y el tipo de dato es el mismo";
-    } else {
-        echo "El valor de a es igual al valor de b pero el tipo de dato no es el mismo";
-    }
-?>
+        if ($a === $b){
+            echo "Son identicos <br>";
+        }else {
+            echo "No son identicos <br>";
+        }
+    ?>
+</body>
+</html>

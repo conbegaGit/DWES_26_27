@@ -13,7 +13,7 @@
         public function getNombre() {
             return $this->nombre;
         }
-
+        
         public function getNota() {
             return $this->nota;
         }
@@ -34,4 +34,4 @@
 
     $alumno->setNota(9);
 
-    echo "<p>Nota: ". $alumno->getNota()."</p>";
+    echo "<p>Nueva nota:". $alumno->getNota()."</p>";

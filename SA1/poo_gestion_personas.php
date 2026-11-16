@@ -1,0 +1,87 @@
+<?php
+
+    echo "<h4>GESTIÓN DE PERSONAS DEL CENTRO</h4>";
+
+    // =============================================
+    // CLASE PADRE: PERSONA
+    // =============================================
+
+    class Persona {
+
+        //constante de la clase
+        const EDAD_MINIMA = 0; 
+
+        //atributos privados
+        private $nombre;
+        private $edad;
+
+        //atributo estático: un atributo estático pertenece a la clase y es compartido por todas sus instancias
+        private static $contador = 0;
+
+        //constructor
+        public function __construct($nombre, $edad) {
+            $this->nombre = $nombre;
+            $this->setEdad($edad);
+
+            //cada vez que se crea una persona, aumenta el contador
+            self:: $contador++;
+        }
+
+        //getter del nombre
+        public function getNombre() {
+            return $this->nombre;
+        }
+
+        //setter del nombre
+        public function setNombre ($nombre) {
+            $this->nombre = $nombre;
+        }
+
+        //getter de la edad
+        public function getEdad() {
+            return $this->edad;
+        }
+
+        //setter de la edad con validación
+        public function setEdad($edad) {
+            if ($edad >= self::EDAD_MINIMA) {
+                $this->edad = $edad;
+            } else {
+                throw new InvalidArgumentException ("LA edad no puede ser negativa");
+            }
+        }
+
+        //método estático
+        public static function getContador() {
+            return self::$contador;
+        }
+
+        //método mágico
+        public function __toString() {
+            return "Nombre: " . $this->nombre . 
+                    " | Edad: " . $this->edad . " años."; 
+        }
+
+    }
+
+
+
+    // =============================================
+    // CLASE HIJA: ALUMNO
+    // =============================================
+
+    class Alumno extends Persona {
+        private $curso;
+        private $nota;
+
+        public function __construct($nombre, $edad, $curso, $nota) {
+            //llamamos al constructor de la clase padre
+            parent:: __construct($nombre, $edad);
+
+            $this->curso = $curso;
+            $this->setNota($nota);
+        }
+    }
+
+?>
+

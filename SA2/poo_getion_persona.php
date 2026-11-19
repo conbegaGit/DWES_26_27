@@ -81,7 +81,56 @@
             $this->curso=$curso;
         }
         public function __toString(){
-            return parent::__toString()." | Nota: ".$this->nota." | Curso: ".$this->curso;
+            $resultado = $this->estaAprovado()
+            ?"APROVADO"
+            :"SUSPENSO";
+
+            return parent:: __toString().
+                "|Curso:".$this->curso.
+                "|Nota:".$this->nota.
+                "|Resultado".$resultado;
         }
+
+        public function estaAprovado(){
+            return $this->nota>=5;
+        }
+    }
+
+    class Profesor extends Persona{
+
+        private $especialidad;
+        public function __construct($nombre,$edad,$especialidad){
+            parent::__construct($nombre,$edad);
+            $this->especialidad=$especialidad;
+        }
+
+
+    }
+
+    try{
+        $alumno1 = new Alumno("Ana", 20, 8, "2DAM");
+        $alumno2 = new Alumno("Carlos", 21, 4, "2DAM");
+        
+        $profesor1= new Profesor(
+            "maria",
+            45,
+            "Desarrollo web"
+        );
+
+        echo"<h2>Alumno</h2>";
+        echo "<p>$alumno1</p>";
+        echo "<p>$alumno1</p>";
+
+        echo"<h2>Profesor</h2>";
+        echo "<p>$profesor1</p>";
+
+        echo"<h2>Estaticas</h2>";
+
+        echo"<p>total persona crada: ".
+            Persona::getContador()."</p>";
+
+
+    }catch(InvalidArgumentException $e){
+
     }
 

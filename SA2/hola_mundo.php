@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Hola mundo</title>// Título de la página web
-    </head>
-    <body>
-        <?php // Inicio del código PHP
-            echo "<h1>Hola mundo</h1>"; // Texto que se mostrará en la página web
-        ?> // Fin del código PHP
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola mundo</title>
+</head>
+<body>
+    <!--
+    Para que funcione las lineas de codigo en php deben ir dentro de los delimitadores de <'?php?>
+    -->
+    <?php
+        echo "Hola mundo";
+    ?>
+</body>
 </html>

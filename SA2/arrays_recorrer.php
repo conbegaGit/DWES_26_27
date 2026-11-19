@@ -1,29 +1,44 @@
-<?php
-    echo "<h4>1. foreach: la forma mashabitual </h4>";
-    $frutas = ["manzana", "pera","platano"];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php
 
-    foreach($frutas as $fruta){
-        echo $fruta . "<br>";
-    }
+        echo "<h4>1. foreach: la forma más habitual</h4>";
 
-    //foreach recorre los elementosy guarda cada valor encada iteracion
-    // en la variable
+        $frutas = ["manzana", "pera", "plátano"];
 
-    echo"<h4>2. foreach: Obtener la clave y el valor</h4>";
-    $notas  = [
-        "Lucia" => 8,
-        "Pablo" => 5,
-        "Marta" => 9
-    ];
-    // asociamos una variable a la clave y otra al valor
-    foreach ($notas as $nombre => $nota){
-        echo "$nombre ha sacado un $nota<br>";
-    }
+        foreach ($frutas as $fruta){
+            echo $fruta . "<br>";
+        }
 
-    echo "<h4>3. Recorrer con for</h4>";
+        // for each recorre los elementos y guarda cada valor, en cada iteracion, en la variable indicada.
 
-    $notas= [7,8,5,9,6];
-    for($i = 0; $i<count($notas);$i++){
-        echo $notas[$i]."<br>";
-    }
-?>
+        echo "<h4>2. foreach: Obtener la clave y el valor</h4>";
+
+        $notas = [
+            "Lucía" => 8.78,
+            "Jeremy" => 9.55,
+            "Pedro Sanchez" => 3.63
+        ];
+
+        // asociamos una variable a la clave y otra al valor
+        foreach ($notas as $nombre => $nota){
+            echo "$nombre ha sacado un $nota.<br>";
+        }
+
+
+        echo "<h4>3. Recorrer con for</h4>";
+
+        $notas = [7,8,5,9,6];
+        // el count es ocmo el .length de Java en un array.
+        for($i = 0; $i < count($notas); $i++){
+            echo $notas[$i]. "<br>";
+        }
+    ?>
+</body>
+</html>

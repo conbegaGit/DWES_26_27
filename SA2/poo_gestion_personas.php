@@ -46,6 +46,9 @@ class Persona{
     }
 }
 
+// =============================
+// CLASE HIJA: Alumno
+// =============================
 
 class Alumno extends Persona{
     private $curso;
@@ -65,6 +68,7 @@ class Alumno extends Persona{
     public function getNota(){
         return $this->$nota;
     }
+    
     public function setNota($nota){
         if ($nota >= 0 && $nota <= 10){
             $this->$nota=$nota;
@@ -77,4 +81,66 @@ class Alumno extends Persona{
     public function estaAprobado(){
         return $this->$nota >= 5;
     }
+
+    public function __toString(){
+        $resultado = $this->estaAprobado()
+            ? "APROBADO"
+            : "SUSPENSO";
+
+        return parent::__toString() . 
+                " | Curso: " . $this->$curso . 
+                " | Nota: " . $this->$nota . 
+                " | Resultado: " . $resultado;
+    }
+
+}
+
+// =============================
+// CLASE HIJA: PROFESOR
+// =============================
+
+class Profesor extends Persona{
+    private $especialidad;
+
+    public function __construct($nombre, $edad, $especialidad){
+        parent::__Construct($nombre, $edad);
+
+        $this->$especialidad = $especialidad;
+    }
+
+    public function __toString(){
+        return parent::__toString() . 
+            " | Especialidad: " . $this->$especialidad;
+    }
+}
+
+// =============================
+// CREACIÓN DE OBJETOS
+// =============================
+
+try {
+    $alumno1 = new Alumno("Ana", 20, "2 DAM", 8);
+    $alumno2 = new Alumno("Carlos", 21, "2 DAM", 4);
+
+    $profesor = new Profesor("María", 45, "Desarrollo web");
+
+    // ============================================
+    // MOSTRAR INFORMACIÓN DE LOS OBJETOS
+    // ============================================
+
+    echo "<h2>Alumnos</h2>";
+
+    echo "<p>$alumno1</p>";
+    echo "<p>$alumno2</p>";
+
+    echo "<h2>Profesores</h2>";
+    echo "<p>$profesor1</p>";
+
+    echo "<h2>Estadisticas</h2>";
+
+    echo "<p>Total de personas creadas: " . Persona.getContador() . "</p>";
+
+}
+catch (InvalidArgumentException $e){
+    echo "<p>Error: " . $e->getMessage() . "</p>"
 }

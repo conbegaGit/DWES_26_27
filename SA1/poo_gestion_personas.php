@@ -80,5 +80,69 @@ class Alumno extends Persona{
         return $this->nota >= 5;
     }
 
-    //
+    //Sobrescribimos el metodo mágico de Persona
+    public function __toString() {
+        $resultado = $this->estarAprobado()
+        ? "APROBADO"
+        : "SUSPENSO";
+    return parent:: __toString() .
+            " | Curso: " . $this->curso .
+            " | Nota: " . $this->nota .
+            " | Resultado: " . $resultado;
+    }
+}
+
+
+
+
+
+//CLASE HIJA PROFESOR
+
+class Profesor extends Persona{
+    private $especialidad;
+
+    public function __construct($nombre, $edad, $especialidad){
+        parent::__construct($nombre, $edad);
+        $this->especialidad = $especialidad;
+    }
+
+    public function __toString(){
+        return parent::__toString() .
+            " | Especialidad: " . $this->especialidad;
+    }
+}
+
+
+
+
+
+//CREACIÓN DE OBJETOS
+
+try{
+    $alumno1 = new Alumno("Ana", 20, "2º DAM", 8);
+    $alumno2 = new Alumno("Carlos", 21, "2º DAM", 4);
+
+    $profesor1 = new Profesor("María", 45, "Desarrollo Web");
+
+    //MOSTRAR INFORMACIÓN DE LOS OBJETOS
+
+    echo "<h2>Alumnos</h2>";
+
+    //__toString() se ejecuta automaticamente
+    //cuando mostramos un objeto como texto
+
+    echo "<p>$alumno1</p>";
+    echo "<p>$alumno2</p>";
+
+    echo "<h2>Profesores</h2>";
+    
+    echo"<p>$profesor1</p>";
+
+    //ATRIBUTO ESTATICO
+    echo "<h2>Estadísticas</h2>";
+
+    echo "<p>Total de personas: " .Persona::getContador()."</p>";
+
+}catch (InvalidArgumentException $e){
+    echo "<p>Error: ".$e->getMessage()."</p>";
 }

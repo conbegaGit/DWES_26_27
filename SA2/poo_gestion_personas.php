@@ -6,7 +6,8 @@ echo "<h4>GESTIÓN DE PERSONAS DEL CENTRO</h4>";
 // CLASE PADRE: PERSONA
 // =============================
 
-class Persona {
+class Persona
+{
     // constante de la clase
     const EDAD_MINIMA = 0;
 
@@ -64,11 +65,13 @@ class Persona {
 // CLASE HIJA: ALUMNO
 // =============================
 
-class Alumno extends Persona {
+class Alumno extends Persona
+{
     private $curso;
     private $nota;
 
-    public function __construct($nombre, $edad, $curso, $nota) {
+    public function __construct($nombre, $edad, $curso, $nota)
+    {
         // llamamos al constructor de la clase padre
         parent::__construct($nombre, $edad);
 
@@ -76,16 +79,19 @@ class Alumno extends Persona {
         $this->setNota($nota);
     }
 
-    public function getCurso() {
+    public function getCurso()
+    {
         return $this->curso;
     }
 
-    public function getNota() {
+    public function getNota()
+    {
         return $this->nota;
     }
 
     // setter de la nota con validación
-    public function setNota($nota) {
+    public function setNota($nota)
+    {
         if ($nota >= 0 && $nota <= 10) {
             $this->nota = $nota;
         } else {
@@ -93,7 +99,81 @@ class Alumno extends Persona {
         }
     }
 
-    public function estarAprobado() {
+    public function estaAprobado()
+    {
         return $this->nota >= 5;
     }
+
+    // Sobrescribimos el método mágico de Persona
+    public function __toString()
+    {
+        $resultado = $this->estaAprobado()
+            ? "APROBADO"
+            : "SUSPENSO";
+
+        return parent::__toString() .
+            " | Curso: " . $this->curso .
+            " | Nota: " . $this->nota .
+            " | Resultado: " . $resultado;
+    }
+}
+
+// =============================
+// CLASE HIJA: PROFESOR
+// =============================
+
+class Profesor extends Persona {
+    
+    private $especialidad;
+
+    public function __construct($nombre, $edad, $especialidad) {
+        parent::__construct($nombre, $edad);
+        $this->especialidad = $especialidad;
+    }
+
+    public function __toString(){
+        return parent::__toString() .
+        " | Especialidad: " . $this->especialidad;
+    }
+}
+
+// =============================
+// CREACIÓN DE OBJETOS
+// =============================
+
+try {
+
+    $alumno1 = new Alumno("Ana", 20, "2º DAM", 8);
+    $alumno2 = new Alumno("Carlos", 21, "2º DAM", 4);
+
+    $profesor1 = new Profesor(
+        "María",
+        45,
+        "Desarrollo web"
+    );
+
+    // =============================
+    // CREACIÓN DE OBJETOS
+    // =============================
+
+    echo "<h2>Alumnos</h2>";
+
+    echo "<p>$alumno1</p>";
+    echo "<p>$alumno2</p>";
+
+    echo "<h2>Profesores</h2>";
+
+    echo "<p>$profesor1</p>";
+
+    // =============================
+    // ATRIBUTO ESTÁTICO
+    // =============================
+
+    echo "<h2>Estadísticas</h2>";
+
+    echo "<p>Total de personas creadas: 
+        ". Persona::getContador() ."</p>";
+
+} catch (InvalidArgumentException $e) {
+    echo "<p>Error: ". $e->getMessage() ."</p>";
 }

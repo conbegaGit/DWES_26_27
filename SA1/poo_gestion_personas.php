@@ -127,9 +127,13 @@ class Profesor extends Persona {
     private $especialidad;
 
     public function __construct($nombre, $edad, $especialidad) {
+
+    
         parent::__construct($nombre, $edad);
         $this->especialidad = $especialidad;
     }
+
+
 
     public function __toString() {
         return parent::__toString() .
@@ -161,7 +165,7 @@ try {
     // cuando mostramos un objeto como texto
 
     echo "<p>$alumno1</p>";
-    echo "<p>$alumnno2</p>";
+    echo "<p>$alumno2</p>";
 
     echo "<h2>Profesores</h2>";
 
@@ -176,10 +180,12 @@ try {
     echo "<p>Total de personas creadas:</p>";
 
     $personas = [
-        $alumnno1,
-        $alumnno2,
+        $alumno1,
+        $alumno2,
         $profesor1
     ];
+
+
 
     foreach ($personas as $persona) {
         // Cada objeto utiliza su propia versión del método __ToString()

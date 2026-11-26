@@ -17,7 +17,7 @@
         echo "El color en \$colores[1] es: $colores[1].<br>";
 
         echo "<h4>1. Arrays ASOCIATIVOS</h4>";
-        // cada elemento se dientifica mediante una clave elegida por el desarrollador
+        // cada elemento se identifica mediante una clave elegida por el desarrollador
         $alumno = [
             "nombre" => "Jeremy",
             "edad" => 19,
